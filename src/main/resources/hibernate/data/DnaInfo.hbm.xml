@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- 刑技平台DNA实体映射 -->
+<hibernate-mapping>
+	<class name="com.borosoft.ypfx.dnaCollision.entity.DnaInfo" table="HJWZ_DYBZ_4419">
+
+		<!-- 实体ID -->
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="40" />
+			<generator class="uuid"></generator>
+		</id>
+
+		<!-- 特有属性 -->
+		<property name="rksj" column="RKSJ" />
+		<property name="gxsj" column="GXSJ" />
+		<property name="bzlx" column="BZLX" />
+		<property name="xm" column="XM" />
+		<property name="sfzh" column="SFZH" />
+		<property name="hjd" column="HJD" />
+		<property name="ryybbh" column="RYYBBH" />
+		<property name="jzrybh" column="JZRYBH" />
+		<property name="bzsj" column="BZSJ" />
+		<property name="bzdwdm" column="BZDWDM" />
+		<property name="bzdwmc" column="BZDWMC" />
+		<property name="wzbh" column="WZBH" />
+		<property name="wzajbh" column="WZAJBH" />
+		<property name="wzlx" column="WZLX" />
+		<property name="farq" column="FARQ" />
+		<property name="fadd" column="FADD" />
+		<property name="jyaq" column="JYAQ" />
+		<property name="ajlbdm" column="AJLBDM" />
+		<property name="ajlbmc" column="AJLBMC" />
+		<property name="tqbw" column="TQBW" />
+		<property name="tqdwdm" column="TQDWDM" />
+		<property name="tqdwmc" column="TQDWMC" />
+		<property name="jzajbh" column="JZAJBH" />
+		<property name="jzajmc" column="JZAJMC" />
+		<property name="jzafrq" column="JZAFRQ" />
+		<property name="jzafdd" column="JZAFDD" />
+		<property name="jzjyaq" column="JZJYAQ" />
+		<property name="jzbadwdm" column="JZBADWDM" />
+		<property name="jzbadwmc" column="JZBADWMC" />
+		<property name="jzajlbdm" column="JZAJLBDM" />
+		<property name="jzajlbmc" column="JZAJLBMC" />
+		<property name="jzajzt" column="JZAJZT" />
+		<property name="dcd_zjid" column="DCD_ZJID" />
+		
+		<!-- 目录字段 -->
+		<!-- <property name="createUserId" column="CREATE_USER_ID" />
+		<property name="creator" column="CREATOR" />
+		<property name="createDate" column="CREATE_DATE" />
+		<property name="modifyUserId" column="MODIFY_USER_ID" />
+		<property name="modifier" column="MODIFIER" />
+		<property name="modifyDate" column="MODIFY_DATE" />
+		<property name="extend1" column="EXTEND1" />
+		<property name="extend2" column="EXTEND2" />
+		<property name="extend3" column="EXTEND3" />
+		<property name="extend4" column="EXTEND4" />
+		<property name="extend5" column="EXTEND5" />
+		<property name="extend6" column="EXTEND6" /> -->
+		
+
+	</class>
+</hibernate-mapping>

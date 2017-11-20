@@ -1,0 +1,19 @@
+/**
+ 悬浮
+**/
+.zIndex {
+	position: absolute;
+	top:10px;
+	right : 10px;
+	z-index: 31;
+	border : 1px solid #57585A;
+	background-color : #FFF;
+}
+
+/**
+draw绘制时显示提示
+**/
+.tooltip{
+	display : inline;
+}
+

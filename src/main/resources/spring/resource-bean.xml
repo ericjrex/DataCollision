@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:cache="http://www.springframework.org/schema/cache" xmlns:context="http://www.springframework.org/schema/context" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:jms="http://www.springframework.org/schema/jms" xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:oxm="http://www.springframework.org/schema/oxm" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:task="http://www.springframework.org/schema/task" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd  
+        http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-3.1.xsd  
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd  
+        http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd  
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.1.xsd  
+        http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms-3.1.xsd  
+        http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-3.1.xsd  
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd  
+        http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-3.1.xsd  
+        http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.1.xsd  
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd  
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd"
+	default-autowire="byName">
+	
+	<!-- 资源管理平台各jar包所需要使用的类 -->
+	<!-- 数据导出 -->
+	<bean id="exportDataFactory" class="com.borosoft.component.export.ExportDataFactory">
+		<property name="exportDataMap">
+			<map key-type="java.lang.String" value-type="com.borosoft.component.export.ExportData">
+				<entry key="csv" value-ref="csvExportData"/>
+				<entry key="excel" value-ref="excelExportData"/>
+				<entry key="json" value-ref="jsonExportData"/>
+				<entry key="pdf" value-ref="pdfExportData"/>
+				<entry key="xml" value-ref="xmlExportData"/>
+			</map>
+		</property>
+	</bean>
+	
+	 <!-- 数据导入 -->
+	<bean id="importDataFactory" class="com.borosoft.component.imp.ImportDataFactory">
+		<property name="importDataMap">
+			<map key-type="java.lang.String" value-type="com.borosoft.component.imp.ImportData">
+				<entry key="xls" value-ref="excel2003ImportData"/>
+				<entry key="xlsx" value-ref="excel2007ImportData"/>
+				<entry key="csv" value-ref="csvImportData"/>
+				<entry key="noTemp" value-ref="noTempExcel2003ImportData"/>
+			</map>
+		</property>
+	</bean>
+	
+	<!-- 当前平台默认数据源方言 -->
+	<bean id="sqlWarp" class="com.borosoft.query.sqlWarp.impl.OracleSqlWarp"/>
+	
+	<!-- 多源数据库方言（不要使用多数据源时，该类不用注入） -->
+	<bean id="sqlWarpFactory" class="com.borosoft.query.sqlWarp.SqlWarpFactory">
+		<property name="sqlWarpMap">
+			<map key-type="java.lang.String" value-type="com.borosoft.query.sqlWarp.SqlWarp">
+				<entry key="013014000" value-ref="sqlWarp"/>
+				<entry key="013014001" value-ref="sqlserverSqlWarp"/>
+				<entry key="013014002" value-ref="mysqlSqlWarp"/>
+				<entry key="013014003" value-ref="sybaseSqlWarp"/>
+				<entry key="013014004" value-ref="db2SqlWarp"/>
+			</map>
+		</property>
+	</bean>
+		
+		
+	<bean id="dnaTaskInfoDAO" class="com.borosoft.framework.dao.HibernateDAOImpl" p:entityClass="com.borosoft.ypfx.dnaCollision.entity.DnaTaskInfo">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="dnaTaskDetailedInfoDAO" class="com.borosoft.framework.dao.HibernateDAOImpl" p:entityClass="com.borosoft.ypfx.dnaCollision.entity.DnaTaskDetailedInfo">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="dnaInfoDAO" class="com.borosoft.framework.dao.HibernateDAOImpl" p:entityClass="com.borosoft.ypfx.dnaCollision.entity.DnaInfo">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	
+</beans>

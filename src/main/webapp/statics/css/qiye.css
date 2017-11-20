@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+body{ margin:0px;
+ font-family: "微软雅黑", System;
+ background:#d1e6f3;
+ font-size:14px;
+ }
+img{ border:0px;}
+a:link {
+	color: #333333;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: underline;
+	color: #666666;
+}
+a:active {
+	text-decoration: none;
+	color: #333333;
+}
+.clear{ width:100%; height:0;clear:both;}
+img{ border:0px;}
+.qiye_top{ height:130px; background:#FFF; margin:0px auto;}
+.qiye_pic_name{ width:100%; height:135px; margin:0px 20px;}
+.qiye_pic{height:128px; width:130px; float:left;}
+.qiye_name{height:119px; line-height:150%; color:#666; font-size:15px; margin:0px 0px 10px 20px;float:left;}
+.qiye_menu_div_01{
+	height:auto !important;
+	height:45px; /*假定最低高度是45px*/
+	min-height:45px; 
+	/* width:100%; */
+	margin:0px auto 0px auto; background:#bee0fb; padding:0px 0px;}
+.qiye_menu_div_02{
+	height:auto !important;
+	height:50px; /*假定最低高度是50px*/
+	min-height:50px; 
+	/* width:100%; */
+	margin:0px auto 10px auto; background:#FFF; padding:15px 0px;}
+.qiye_menu_div_02b{
+	height:auto !important;
+	height:50px; /*假定最低高度是50px*/
+	min-height:50px; 
+	width:100%;margin:0px auto 10px auto; background:#f3f3f3; padding:15px 0px;}
+.qiye_menu_div_03{
+	height:auto !important;
+	height:30px; /*假定最低高度是40px*/
+	min-height:30px; 
+	width:100%;margin:0px auto;}	
+.qiye_name_text{ font-size:24px; color:#036fc7; line-height:200%;}
+.qiye_menu_01_on{width:159px; height:42px; line-height:42px; font-size:15px; text-align:center; font-weight:bold; border-top:3px solid #FC0; background:#8DA4FE; float:left;}
+.qiye_menu_01_off{width:160px; height:42px; line-height:42px; font-size:15px; text-align:center; border-top:3px solid #eee;float:left;}
+
+.qiye_menu_02_on{width:auto!important;width:149px;min-width:149px;height:36px; line-height:36px; font-weight:bolder; text-align:center; border:1px solid #ddd; background:#FC3;margin:0px 0px 5px -1px;padding:0px 10px; float:left;}
+.qiye_menu_02_off{width:auto!important;width:149px;min-width:149px;  height:36px; line-height:36px; text-align:center; border:1px solid #ddd;margin:0px 0px 5px -1px;padding:0px 5px; float:left;}
+
+.span_menu{ height:30px;line-height:30px; background:#f8f8f8; padding:0px 10px; border:1px solid #ddd; margin-top:10px;display:inline-block;}
+.span_menu_on{ height:30px;line-height:30px; background:#ccc; padding:0px 10px; margin-top:10px;display:inline-block;}
+.span_menu_off{ height:30px;line-height:30px; padding:0px 10px; margin-top:10px;display:inline-block;}
+
+.qiye_list_div_01{
+	height:auto !important;
+	height:300px; /*假定最低高度是200px*/
+	min-height:300px; 
+	width:100%;margin:0px auto; background:#FFF; padding:10px 20px;}
+.qiye_list_div_01_blue_top{
+	height:auto !important;
+	height:300px; /*假定最低高度是200px*/
+	min-height:300px; 
+	width:100%;margin:0px auto; background:#FFF; padding:20px 20px;}	
+.qiye_list_div_02{
+	height:auto !important;
+	height:200px; /*假定最低高度是200px*/
+	min-height:200px; 
+	width:100%;margin:0px auto;}	
+	
+.qiy_list_title_01{
+	height:45px; line-height:45px; font-size:15px; font-weight:bold; background:url(../images/blue_start.png) left no-repeat;
+	margin:5px  auto; border:1px solid #CCC; padding-left:80px; 
+	}
+.blue_16{ color:#036fc7; font-size:16px;}
+.hui_14{ color:#9a9a9a; font-size:14px;}
+.qiye_search_div_01{width:1200px; height:40px;margin:10px auto; text-align:center;}
+.qiye_search_input{ height:30px; border:1px solid #CCC; line-height:32px; width:300px; background:#f8f8f8;}
+.qiye_search_button{height:34px; border:0px; line-height:34px; background:#8DA4FE; color:#FFF; font-size:14px; font-weight:bold; margin-left:-5px;}
+.qiye_view_button{height:25px; border:0px; line-height:25px; background:#8DA4FE; color:#FFF; font-size:12px;cursor: pointer;}
+
+.the_table{ background:#CCC;color:#333;width:100%}
+.the_table th,.the_table td{height:32px; padding:0px 5px;vertical-align:middle;}
+.title_td{text-align:right; background:#f8f8f8; height:40px; color:#9a9a9a;}
+.content_td{text-align:left; background:#FFF;}
+.qiye_list_div_02 th{ background:#bee0fb;}
+.image_right{float:right;}
+
+.banshi_tr_text{ background:#f8f8f8;}
+.banshi_line_hui{ background-color:#CCC; height:8px;}
+.banshi_line_red{ background-color:#F60; height:8px;}
+.banshi_line_red2hui{background: url(../images/red.jpg) left no-repeat #CCC; height:8px;}
+.banshi_line_table{color:#666;margin:5px 0px 5px 0px;}
+.12_hui{ font-size:12px; color:#ccc;}
+.no_border{border-right:0px;border-left:0px;}
+.to_left{  font-size:12px; text-align:left;}
+.to_right{ font-size:12px;  text-align:right;}

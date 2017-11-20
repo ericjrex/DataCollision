@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- DNA碰撞任务实体映射 -->
+<hibernate-mapping>
+	<class name="com.borosoft.ypfx.dnaCollision.entity.DnaTaskInfo" table="YW_DCD_DGSGAJ_DNAPZR">
+
+		<!-- 实体ID -->
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="40" />
+			<generator class="uuid"></generator>
+		</id>
+
+		<!-- 特有属性 -->
+		<property name="dcd_rwbh" column="DCD_RWBH" />
+		<property name="dcd_rwzt" column="DCD_RWZT" />
+		<property name="dcd_rwkssj" column="DCD_RWKSSJ" />
+		<property name="dcd_rwzxsj" column="DCD_RWZXSJ" />
+		<property name="dcd_dnaid" column="DCD_DNAID" />
+		<property name="dcd_ajbh" column="DCD_AJBH" />
+		<property name="dcd_rysjbh" column="DCD_RYSJBH" />
+		
+		<!-- 目录字段 -->
+		<!-- <property name="createUserId" column="CREATE_USER_ID" />
+		<property name="createUser" column="CREATEUSER" />
+		<property name="modifyUserId" column="MODIFY_USER_ID" />
+		<property name="modifier" column="MODIFIER" />
+		<property name="modifyDate" column="MODIFY_DATE" />
+		<property name="extend1" column="EXTEND1" />
+		<property name="extend2" column="EXTEND2" />
+		<property name="extend3" column="EXTEND3" />
+		<property name="extend4" column="EXTEND4" />
+		<property name="extend5" column="EXTEND5" />
+		<property name="extend6" column="EXTEND6" /> -->
+		
+
+	</class>
+</hibernate-mapping>

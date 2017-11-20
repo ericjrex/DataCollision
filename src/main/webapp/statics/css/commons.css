@@ -1,0 +1,382 @@
+@CHARSET "UTF-8";
+
+/*排除arcgis的标注*/
+:not(text)  {
+	font-size: 12px;
+	font-family: "microsoft yahei", "微软雅黑", "黑体", "simsun", "宋体";
+}
+
+table {
+	border-collapse: collapse;
+}
+
+/*超级链接:来自腾讯首页链接样式*/
+a:hover {
+	color: #cd0200;
+	text-decoration: underline;
+}
+
+a {
+	color: #2d374b;
+	text-decoration: none;
+}
+
+form {
+	margin: 0px;
+}
+
+/*控件样式*/
+.input {
+	-moz-border-bottom-colors: none;
+	-moz-border-image: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	background: url("./commons/form/text-bg.png") repeat-x scroll 0 0
+		#ffffef;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #707070 #CECECE #CECECE #707070;
+	color: #222222;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	vertical-align: middle;
+	border-style: solid;
+}
+
+.u-input {
+	-moz-border-bottom-colors: none;
+	-moz-border-image: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #707070 #CECECE #CECECE #707070;
+	color: #222222;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	vertical-align: middle;
+	border-style: solid;
+	width: 80%;
+	background: #fefefe;
+}
+
+.u-input-disabled {
+	color: #ccc;
+}
+
+/* 表单 */
+.u-form {
+	font-size: 12px;
+	margin-top: 0px; /*修改IE下面自动margin的问题*/
+	margin-bottom: 0px; /*修改IE下面自动margin的问题*/
+	background: #ffffff;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 100%;
+}
+
+.u-form .form-table {
+	width: 100%;
+	border-spacing: 1px;
+	border-collapse: collapse;
+}
+
+.u-form .form-table td,.u-form .form-table th {
+	border: 0px solid #aaa;
+	border-collapse: collapse;
+	padding: 1px;
+}
+
+.u-form .item {
+	text-align: right;
+	white-space: nowrap;
+	width: 20%;
+}
+
+.u-item {
+	text-align: right;
+	white-space: nowrap;
+}
+
+.u-table {
+	width: 100%;
+}
+
+.u-form .even,.edit-table .even,.u-table .even {
+	height: 24px;
+	background: #f0f7fb;
+}
+
+.u-form .odd,.edit-table .odd,.u-table .odd {
+	height: 24px;
+	background: #FFFFFF;
+}
+
+.u-form .hover {
+	background: #e1eaff;
+}
+
+.u-form .click { /* 	white-space: nowrap; */
+	background: #c9f1ff;
+}
+
+.u-form .optip {
+	background: url("./commons/form/form-optip.gif") no-repeat left center;
+	margin-bottom: 0px;
+	border-bottom: #ccc dashed 0px;
+	padding-left: 15px;
+	font-size: 14px;
+}
+
+.edit-toolbar {
+	padding-left: 10px;
+}
+
+.edit-panel {
+	padding: 10px;
+	padding-top: 2px;
+}
+
+/*{{搜索*/
+form.search_form {
+	margin: 0px;
+}
+
+.u-search-form {
+	font-size: 12px;
+	margin-top: 0px; /*修改IE下面自动margin的问题*/
+	margin-bottom: 0px; /*修改IE下面自动margin的问题*/
+}
+
+.u-search-form .form-table {
+	width: 100%;
+	border-spacing: 1px;
+	border-collapse: collapse;
+}
+
+.u-search-form .form-table td,.u-search-form .form-table th {
+	padding: 1px;
+}
+
+.u-search-form .item {
+	text-align: right;
+	white-space: nowrap;
+}
+
+.u-search-form input,.u-search-form label {
+	vertical-align: middle;
+}
+
+/*搜索}}*/
+label.pointer {
+	cursor: pointer;
+}
+
+label.require {
+	color: red;
+}
+
+.icon_box {
+	display: inline-block;
+	width: 16px;
+	height: 18px;
+	vertical-align: top;
+	overflow: hidden;
+}
+
+/*分隔符*/
+.separator {
+	border-left: 1px solid #678;
+	border-right: 1px solid #fff;
+}
+
+/*arrow*/
+.u-icon-fastforward {
+	background: url('./platform/arrow/fastforward.png') no-repeat left
+		center;
+}
+
+.u-icon-left {
+	background: url('./platform/arrow/left.png') no-repeat left center;
+}
+
+.u-icon-rewind {
+	background: url('./platform/arrow/rewind.png') no-repeat left center;
+}
+
+.u-icon-right {
+	background: url('./platform/arrow/right.png') no-repeat left center;
+}
+
+.u-icon-menu {
+	background: url('./commons/menu/panel.png') no-repeat left center;
+}
+
+.u-icon-forward {
+	background: url('./u-icons/layout_button_left.gif') no-repeat left center;
+}
+
+.u-icon-backward {
+	background: url('./u-icons/layout_button_right.gif') no-repeat right center;
+}
+
+.u-icon-upward {
+	background: url('./u-icons/layout_button_up.gif') no-repeat left center;
+}
+
+.u-icon-downward {
+	background: url('./u-icons/layout_button_down.gif') no-repeat left center;
+}
+
+/*tipIcon*/
+.valideTip {
+	background: url("./commons/form/tip_icon.gif") no-repeat left center
+		transparent;
+	cursor: pointer;
+	padding-left: 20px;
+}
+
+/*readtipIcon*/
+.readTip {
+	background: url("./commons/form/tip_read.png") no-repeat left center
+		transparent;
+	cursor: pointer;
+	padding-left: 20px;
+}
+
+.u-tip {
+	background: url("./commons/form/tip_icon.gif") no-repeat left center
+		transparent;
+	cursor: pointer;
+	padding-left: 20px;
+	width: 20px;
+	height: 17px;
+}
+
+/*排序*/
+.sort_asc {
+	
+}
+
+.sort_desc {
+	
+}
+
+input.readonly {
+	background: #f6f6f6;
+}
+
+/*表单样式*/
+.the_title {
+	background: url("./commons/form/title_bg_01.jpg") repeat-x scroll 0 0
+		transparent;
+	border: 1px solid #A3BED9;
+	font-size: 14px;
+	line-height: 29px;
+	text-indent: 2px;
+	width: 100%;
+	height: 29px;
+	margin-bottom: 1px;
+	margin-top: 1px;
+	overflow: hidden;
+	width: 100%;
+	overflow: hidden;
+}
+
+.form-table {
+	width: 100%;
+	border: 1px solid #A3BED9;
+}
+
+.u-panel {
+	width: 100%;
+	margin-bottom: 2px;
+}
+
+.u-panel-title {
+	background: url("./commons/form/title_bg_01.jpg") repeat-x scroll 0 0
+		transparent;
+	border: 1px solid #A3BED9;
+	font-size: 14px;
+	line-height: 29px;
+	text-indent: 10px;
+	width: 100%;
+	height: 29px;
+	margin-bottom: -1px;
+	margin-top: 1px;
+	overflow: hidden;
+	margin-top: 1px;
+	margin-top: 1px;
+}
+
+.u-panel-box {
+	width: 100%;
+	border: 1px solid #A3BED9;
+}
+
+.panel-tools {
+	float: right;
+	padding-right: 5px;
+	padding-top: 2px;
+	cursor: pointer;
+}
+
+.arrow_up {
+	background: url("./commons/form/arrow_up.gif") repeat-x scroll 0 0
+		transparent;
+}
+
+.require {
+	color: red;
+}
+
+.u-require {
+	color: red;
+}
+
+.u-readonly {
+	background: #f6f6f6;
+}
+
+.u-toolbar {
+	background: #f7faff;
+}
+
+.u-hidden {
+	display: none;
+}
+
+/*border*/
+.bl0 {
+	border-left: 0px;
+}
+
+.bt0 {
+	border-top: 0px;
+}
+
+.bb0 {
+	border-bottom: 0px;
+}
+
+.br0 {
+	border-right: 0px;;
+}
+
+.bl1 {
+	border-left: 1px;
+}
+
+.bt1 {
+	border-top: 1px;
+}
+
+.bb1 {
+	border-bottom: 1px;
+}
+
+.br1 {
+	border-right: 1px;;
+}
